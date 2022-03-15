@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+## Welcome to Yannick Djomo blog!
+## You are all welcome to connect with me and contribute to my researches.
 
 You can use the [editor on GitHub](https://github.com/franckya/blog-researches/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
