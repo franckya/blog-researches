@@ -35,4 +35,4 @@ For more information about this repository, visit or clone it at [blog-researche
 
 ### Support or Contact
 
-Having trouble with Pages? book an appointment with me to discuss more [Book an Appointnment](https://calendly.com/fkengne-mcdns/30min?month=2022-03), and I we’ll help you sort it out.
+Having trouble with Pages? [Book an Appointnment](https://calendly.com/fkengne-mcdns/30min?month=2022-03) with me to discuss more , and I we’ll help you sort it out.
