@@ -1,4 +1,4 @@
-## Welcome to Yannick Djomo blog!
+# Welcome to Yannick Djomo blog!
 
 You are all welcome to connect with me and contribute to my researches.
 
@@ -14,7 +14,7 @@ System Requirements:
 
 Note: If you are upgrading from a version of OpenNMS Horizon older than 29, you will have to fix the ownership of your files.
 
-# Fixing Permissions and Ownership
+## Fixing Permissions and Ownership
 
 Java ICMP Permissions
 
