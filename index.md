@@ -4,8 +4,6 @@ You are all welcome to connect with me and contribute to my researches.
 
 You can use the [editor](https://github.com/franckya/blog-researches/edit/gh-pages/index.md) to maintain and preview the content of my website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 ### What is new to Opennms?
 
 System Requirements: 
@@ -24,8 +22,8 @@ OpenNMS will attempt to configure ICMP permissions using the net.ipv4.ping_group
 
 If you are on a distribution with an older unsupported kernel, you can give Java ICMP permissions using the setcap utility once you have completed your upgrade. Note that this example assumes you have already run $OPENNMS_HOME/bin/install after install or upgrade, so
 
-## $OPENNMS_HOME/etc/java.conf exists.
-### setcap cap_net_raw+ep $(</opt/opennms/etc/java.conf) && echo "$(dirname $(</opt/opennms/etc/java.conf))/../lib/jli/" > /etc/ld.so.conf.d/java.conf && ldconfig -v
+$OPENNMS_HOME/etc/java.conf exists.
+setcap cap_net_raw+ep $(</opt/opennms/etc/java.conf) && echo "$(dirname $(</opt/opennms/etc/java.conf))/../lib/jli/" > /etc/ld.so.conf.d/java.conf && ldconfig -v
 
 - Make sure to run as a root to avoid the 'permission denied' error
 ```
