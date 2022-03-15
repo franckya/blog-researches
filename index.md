@@ -8,25 +8,24 @@ You can use the [editor](https://github.com/franckya/blog-researches/edit/gh-pag
 
 System Requirements: 
 
-Java 11: OpenNMS Horizon 29 runs on JDK 11.
+- Java 11: OpenNMS Horizon 29 runs on JDK 11.
 
-PostgreSQL 10 or higher: Horizon 29 requires any supported version of PostgreSQL from 10 up to (and including) 14.
+- PostgreSQL 10 or higher: Horizon 29 requires any supported version of PostgreSQL from 10 up to (and including) 14.
 
 Note: If you are upgrading from a version of OpenNMS Horizon older than 29, you will have to fix the ownership of your files.
 
-```Fixing Permissions and Ownership
+# Fixing Permissions and Ownership
 
 Java ICMP Permissions
 
-OpenNMS will attempt to configure ICMP permissions using the net.ipv4.ping_group_range sysctl. However, Linux kernels older than version 3.11 (like the version provided by CentOS 7) do not support this setting fully.
+- OpenNMS will attempt to configure ICMP permissions using the net.ipv4.ping_group_range sysctl. However, Linux kernels older than version 3.11 (like the version provided by CentOS 7) do not support this setting fully.
 
-If you are on a distribution with an older unsupported kernel, you can give Java ICMP permissions using the setcap utility once you have completed your upgrade. Note that this example assumes you have already run $OPENNMS_HOME/bin/install after install or upgrade, so
+- If you are on a distribution with an older unsupported kernel, you can give Java ICMP permissions using the setcap utility once you have completed your upgrade. Note that this example assumes you have already run $OPENNMS_HOME/bin/install after install or upgrade, so
 
 $OPENNMS_HOME/etc/java.conf exists.
 setcap cap_net_raw+ep $(</opt/opennms/etc/java.conf) && echo "$(dirname $(</opt/opennms/etc/java.conf))/../lib/jli/" > /etc/ld.so.conf.d/java.conf && ldconfig -v
 
 - Make sure to run as a root to avoid the 'permission denied' error
-```
 
 For more details see [What's New in OpenNMS Horizon 29](https://docs.opennms.com/horizon/29/releasenotes/whatsnew.html).
 
