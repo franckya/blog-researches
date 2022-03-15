@@ -1,13 +1,15 @@
-Welcome to Yannick Djomo blog!
+## Welcome to Yannick Djomo blog!
+
 You are all welcome to connect with me and contribute to my researches.
 
-You can use the [editor on GitHub](https://github.com/franckya/blog-researches/edit/gh-pages/index.md) to maintain and preview the content of my website in Markdown files.
+You can use the [editor](https://github.com/franckya/blog-researches/edit/gh-pages/index.md) to maintain and preview the content of my website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### What is new to Opennms?
 
 ```System Requirements: 
+
 Java 11: OpenNMS Horizon 29 runs on JDK 11.
 
 PostgreSQL 10 or higher: Horizon 29 requires any supported version of PostgreSQL from 10 up to (and including) 14.
