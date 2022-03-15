@@ -1,38 +1,38 @@
-## Welcome to Yannick Djomo blog!
-## You are all welcome to connect with me and contribute to my researches.
+Welcome to Yannick Djomo blog!
+You are all welcome to connect with me and contribute to my researches.
 
-You can use the [editor on GitHub](https://github.com/franckya/blog-researches/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+You can use the [editor on GitHub](https://github.com/franckya/blog-researches/edit/gh-pages/index.md) to maintain and preview the content of my website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### What is new to Opennms?
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```System Requirements: 
+Java 11: OpenNMS Horizon 29 runs on JDK 11.
 
-```markdown
-Syntax highlighted code block
+PostgreSQL 10 or higher: Horizon 29 requires any supported version of PostgreSQL from 10 up to (and including) 14.
+```
+Note: If you are upgrading from a version of OpenNMS Horizon older than 29, you will have to fix the ownership of your files.
 
-# Header 1
-## Header 2
-### Header 3
+Fixing Permissions and Ownership
 
-- Bulleted
-- List
+```Java ICMP Permissions
+OpenNMS will attempt to configure ICMP permissions using the net.ipv4.ping_group_range sysctl. However, Linux kernels older than version 3.11 (like the version provided by CentOS 7) do not support this setting fully.
 
-1. Numbered
-2. List
+If you are on a distribution with an older unsupported kernel, you can give Java ICMP permissions using the setcap utility once you have completed your upgrade. Note that this example assumes you have already run $OPENNMS_HOME/bin/install after install or upgrade, so
 
-**Bold** and _Italic_ and `Code` text
+## $OPENNMS_HOME/etc/java.conf exists.
+### setcap cap_net_raw+ep $(</opt/opennms/etc/java.conf) && echo "$(dirname $(</opt/opennms/etc/java.conf))/../lib/jli/" > /etc/ld.so.conf.d/java.conf && ldconfig -v
 
-[Link](url) and ![Image](src)
+- Make sure to run as a root to avoid the 'permission denied' error
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+For more details see [What's New in OpenNMS Horizon 29](https://docs.opennms.com/horizon/29/releasenotes/whatsnew.html).
 
-### Jekyll Themes
+### Yannick Djomo
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/franckya/blog-researches/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+For more information about this repository, visit or clone it at [blog-researches](https://github.com/franckya/blog-researches/settings/pages). 
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? book an appointment with me to discuss more [documentation](https://calendly.com/fkengne-mcdns/30min?month=2022-03), and I we’ll help you sort it out.
