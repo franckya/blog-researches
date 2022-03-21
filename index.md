@@ -29,6 +29,8 @@ setcap cap_net_raw+ep $(</opt/opennms/etc/java.conf) && echo "$(dirname $(</opt/
 
 For more details see [What's New in OpenNMS Horizon 29](https://docs.opennms.com/horizon/29/releasenotes/whatsnew.html).
 
+If you are looking to install OpenNMS on CentOS 8, click [here](https://franckya.github.io/openNMS/) to access the code, and let us know if you are experiencing any issue. 
+
 ### Yannick Djomo
 
 For more information about this repository, visit or clone it at [blog-researches](https://github.com/franckya/blog-researches/settings/pages). 
